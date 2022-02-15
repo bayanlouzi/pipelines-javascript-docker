@@ -9,4 +9,4 @@ steps:
     DockerNamespace: 'ACRCustomRegistry1213.azurecr.io'
     DockerRepository: 'helloacrtasks'
     DockerImageTag: 'v1'
-    AppSettings: 'bayan:bayan'
+    AppSettings: '-WEBSITES_CONTAINER_START_TIME_LIMIT 1800 '
