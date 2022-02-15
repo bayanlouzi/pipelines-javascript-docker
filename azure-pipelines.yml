@@ -1,3 +1,4 @@
+
 steps:
 - task: AzureRmWebAppDeployment@4
   inputs:
@@ -8,7 +9,4 @@ steps:
     DockerNamespace: 'ACRCustomRegistry1213.azurecr.io'
     DockerRepository: 'helloacrtasks'
     DockerImageTag: 'v1'
-    AppSettings: 'test : test'
-# Build your Python project and deploy it to Azure as a Linux Web App.
-# Change python version to one thats appropriate for your application.
-# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+    AppSettings: 'bayan:bayan'
