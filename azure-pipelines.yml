@@ -9,4 +9,4 @@ steps:
     DockerNamespace: 'ACRCustomRegistry1213.azurecr.io'
     DockerRepository: 'hello-word'
     DockerImageTag: 'v2'
-    AppSettings: '-WEBSITES_CONTAINER_START_TIME_LIMIT 1800 -testapp testvalue '
+    AppSettings: '-WEBSITES_CONTAINER_START_TIME_LIMIT 1800 -DOCKER_REGISTRY_SERVER_URL ACRCustomRegistry1213.azurecr.io -DOCKER_REGISTRY_SERVER_USERNAME ACRCustomRegistry1213 -DOCKER_REGISTRY_SERVER_PASSWORD wEV17NTxHafsH3Exgnl/rpOrjxZZmQEk '
