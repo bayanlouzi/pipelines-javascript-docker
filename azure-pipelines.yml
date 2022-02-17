@@ -8,5 +8,5 @@ steps:
     WebAppName: 'mypython-customcontainer'
     DockerNamespace: 'ACRCustomRegistry1213.azurecr.io'
     DockerRepository: 'helloacrtasks'
-    DockerImageTag: 'v1'
+    DockerImageTag: 'v2'
     AppSettings: '-WEBSITES_CONTAINER_START_TIME_LIMIT 1800 -testapp testvalue '
