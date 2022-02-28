@@ -1,12 +1,8 @@
 
 steps:
-- task: AzureRmWebAppDeployment@4
+- task: AzureWebAppContainer@1
   inputs:
-    ConnectionType: 'AzureRM'
     azureSubscription: 'Bayan Allouzi (48c2ece5-ded8-4806-8c46-72df34f73606)'
-    appType: 'webAppContainer'
-    WebAppName: 'mypython-customcontainer'
-    DockerNamespace: 'ACRCustomRegistry1213.azurecr.io'
-    DockerRepository: 'samples/nginx'
-    DockerImageTag: 'v2'
-    AppSettings: '-WEBSITES_CONTAINER_START_TIME_LIMIT 1800 -DOCKER_REGISTRY_SERVER_URL ACRCustomRegistry1213.azurecr.io -DOCKER_REGISTRY_SERVER_USERNAME ACRCustomRegistry1213 -DOCKER_REGISTRY_SERVER_PASSWORD wEV17NTxHafsH3Exgnl/rpOrjxZZmQEk '
+    appName: 'mypython-customcontainer'
+    containers: 'ACRCustomRegistry1213.azurecr.io/amples/nginx:v2'
+    configurationStrings: '-Port 5000 -RequestTimeout 5000'
