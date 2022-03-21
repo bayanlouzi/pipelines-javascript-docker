@@ -3,6 +3,6 @@ steps:
 - task: AzureWebAppContainer@1
   inputs:
     azureSubscription: 'Bayan Allouzi (48c2ece5-ded8-4806-8c46-72df34f73606)'
-    appName: 'PythonPrep-App'
+    appName: 'python-custom-pipeline'
     containers: 'ACRCustomRegistry1213.azurecr.io/samples/nginx:$(Build.BuildId)'
     appSettings: '-Port 5000 -RequestTimeout 5000 -new__appsettings devops_deployment_test2'
