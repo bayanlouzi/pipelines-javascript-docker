@@ -10,4 +10,4 @@ steps:
     DockerNamespace: ACRCustomRegistry1213.azurecr.io
     DockerRepository: samples/nginx
     DockerImageTag: '$(BuildId)'
-    AppSettings: ' -PORT 9005'
+    AppSettings: ' -HelloParamater  hello'
