@@ -5,4 +5,4 @@ steps:
     azureSubscription: 'Bayan Allouzi (48c2ece5-ded8-4806-8c46-72df34f73606)'
     appName: 'mypython-customcontainer'
     containers: 'ACRCustomRegistry1213.azurecr.io/samples/nginx:$(BuildId)'
-    appSettings: '-new__appsettings devops_deployment_test2'
+    appSettings: '-new__appsettings devops_deployment_test3'
