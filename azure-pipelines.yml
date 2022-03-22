@@ -10,4 +10,4 @@ steps:
     DockerNamespace: ACRCustomRegistry1213.azurecr.io
     DockerRepository: samples/nginx
     DockerImageTag: '$(BuildId)'
-    AppSettings: '-DOCKER_REGISTRY_SERVER_URL $(DOCKER_REGISTRY_SERVER_URL) DOCKER_REGISTRY_SERVER_USERNAME $(DOCKER_REGISTRY_SERVER_USERNAME) -DOCKER_REGISTRY_SERVER_PASSWORD $(DOCKER_REGISTRY_SERVER_PASSWORD) -PORT 9005'
+    AppSettings: ' -PORT 9005'
