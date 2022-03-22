@@ -1,8 +1,13 @@
 
+
 steps:
-- task: AzureWebAppContainer@1
+- task: AzureRmWebAppDeployment@4
+  displayName: 'Azure App Service Deploy: mycustom-python-app-test'
   inputs:
     azureSubscription: 'Bayan Allouzi (48c2ece5-ded8-4806-8c46-72df34f73606)'
-    appName: 'mypython-customcontainer'
-    containers: 'ACRCustomRegistry1213.azurecr.io/samples/nginx:$(BuildId)'
-    appSettings: '-new__appsettings devops_deployment_test3'
+    appType: webAppContainer
+    WebAppName: 'mypython-customcontainer'
+    DockerNamespace: ACRCustomRegistry1213.azurecr.io
+    DockerRepository: samples/nginx
+    DockerImageTag: '$(Build.BuildId)'
+    AppSettings: '-DOCKER_REGISTRY_SERVER_URL $(DOCKER_REGISTRY_SERVER_URL) DOCKER_REGISTRY_SERVER_USERNAME $(DOCKER_REGISTRY_SERVER_USERNAME) -DOCKER_REGISTRY_SERVER_PASSWORD $(DOCKER_REGISTRY_SERVER_PASSWORD) -PORT 9005'
